@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    user-select: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.container {
+    background-color: #e0e0e0;
+    width: 100%;
+    min-height: 100vh;
+    max-width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main {
+    width: 25rem;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 3rem;
+    box-shadow: 11px 11px 27px #c5c5c5,-11px -11px 27px #fbfbfb;;
+    overflow: hidden;
+
+}
+
+.result {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 1.5rem;
+    box-shadow: inset 8px 8px 16px #cecece, inset -8px -8px 16px #f2f2f2;
+    overflow: hidden;
+
+    & .output {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        color: rgb(86, 86, 86);
+        background-color: transparent;
+        scroll-behavior: auto;
+    }
+    & .first {
+        text-align: right;
+        border: 0;
+        height: 70%;
+        font-size: 3rem;
+        /* max-width: 100%; */
+    }
+    & .first:focus{
+        border: 0;
+        outline: none;
+    }
+    & .second {
+        height: 30%;
+        font-size: 1.5rem;
+    }
+
+}
+
+
+.input {
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1.4rem;
+    padding: 1.4rem;
+
+    & .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6rem;
+        color: rgb(66, 66, 66);
+        border-radius: 5rem;
+        box-shadow: 7px 7px 15px #b1b1b1,
+        -7px -7px 15px #ffffff;
+    }
+}
+
+.buttons:active{
+    box-shadow:  7px 7px 10px #d0d0d0,
+    -7px -7px 10px #f0f0f0;
+}
