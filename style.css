@@ -1,3 +1,7 @@
+:root{
+    --backgroun-color: #e0e0e0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +18,7 @@ body {
 }
 
 .container {
-    background-color: #e0e0e0;
+    background-color: var(--backgroun-color);
     width: 100%;
     min-height: 100vh;
     max-width: auto;
@@ -26,7 +30,7 @@ body {
 
 .main {
     width: 25rem;
-    height: 70vh;
+    height: 42rem;
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -54,25 +58,27 @@ body {
         color: rgb(86, 86, 86);
         background-color: transparent;
         scroll-behavior: auto;
+        transition: all .4s ease;
     }
-    & .first {
-        text-align: right;
-        border: 0;
-        height: 70%;
-        font-size: 3rem;
-        /* max-width: 100%; */
-    }
+
     & .first:focus{
         border: 0;
         outline: none;
     }
-    & .second {
-        height: 30%;
-        font-size: 1.5rem;
-    }
 
 }
+.second {
+    height: 30%;
+    font-size: 1.5rem;
+    
+}
 
+.first {
+    text-align: right;
+    border: 0;
+    height: 70%;
+    font-size: 3rem;
+}
 
 .input {
     height: 70%;
@@ -98,3 +104,32 @@ body {
     box-shadow:  7px 7px 10px #d0d0d0,
     -7px -7px 10px #f0f0f0;
 }
+
+.make-big{
+    height: 70%;
+    font-size: 3rem;
+}
+
+.make-small{
+    height: 30%;
+    font-size: 1.5rem;
+}
+
+@media (width<500px){
+    html{
+        font-size: 14px;
+    }
+    .main{
+        height: 40rem;
+    }
+}
+
+@media (width<400px){
+    html{
+        font-size: 10px;
+    }
+    .main{
+        height: 40rem;
+    }
+}
+
